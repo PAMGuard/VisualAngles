@@ -9,7 +9,6 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
@@ -18,7 +17,9 @@ import javax.swing.border.TitledBorder;
 import PamUtils.LatLong;
 import PamUtils.PamCalendar;
 import PamView.PamSidePanel;
+import PamView.dialog.PamButton;
 import PamView.dialog.PamGridBagContraints;
+import PamView.dialog.PamLabel;
 import PamView.dialog.PamTextField;
 import PamView.panel.PamPanel;
 import visualangle.VisAngDataUnit;
@@ -51,7 +52,7 @@ public class VisAngSidePanel implements PamSidePanel {
 		arrayRange = new PamTextField(fieldSize);
 //		arrayAngle.setEditable(false);
 //		arrayRange.setEditable(false);
-		saveButton = new JButton("Save");
+		saveButton = new PamButton("Save");
 		
 		CalcAction calcAction = new CalcAction(VisAngleParams.CALCDIRECTION.VISUALTOARRAY);
 		arrayDistance.addActionListener(calcAction);
@@ -84,43 +85,43 @@ public class VisAngSidePanel implements PamSidePanel {
 		c.ipady = 0;
 		c.insets.bottom = c.insets.top = 1;
 		c.insets.left = c.insets.right = 1;
-		visPanel.add(new JLabel("Array distance ", JLabel.RIGHT), c);
+		visPanel.add(new PamLabel("Array distance ", PamLabel.RIGHT), c);
 		c.gridx ++;
 		visPanel.add(arrayDistance, c);
 		c.gridx ++;
-		visPanel.add(new JLabel("m", JLabel.LEFT), c);
+		visPanel.add(new PamLabel("m", PamLabel.LEFT), c);
 		c.gridx = 0;
 		c.gridy++;
 
-		visPanel.add(new JLabel("Visual Angle ", JLabel.RIGHT), c);
+		visPanel.add(new PamLabel("Visual Angle ", PamLabel.RIGHT), c);
 		c.gridx ++;
 		visPanel.add(visAngle, c);
 		c.gridx ++;
-		visPanel.add(new JLabel(LatLong.deg, JLabel.LEFT), c);
+		visPanel.add(new PamLabel(LatLong.deg, PamLabel.LEFT), c);
 		c.gridx = 0;
 		c.gridy++;
 
-		visPanel.add(new JLabel("Visual Range ", JLabel.RIGHT), c);
+		visPanel.add(new PamLabel("Visual Range ", PamLabel.RIGHT), c);
 		c.gridx ++;
 		visPanel.add(visRange, c);
 		c.gridx ++;
-		visPanel.add(new JLabel("m", JLabel.LEFT), c);
+		visPanel.add(new PamLabel("m", PamLabel.LEFT), c);
 		c.gridx = 0;
 		c.gridy++;
 
-		visPanel.add(new JLabel("Array Angle ", JLabel.RIGHT), c);
+		visPanel.add(new PamLabel("Array Angle ", PamLabel.RIGHT), c);
 		c.gridx ++;
 		visPanel.add(arrayAngle, c);
 		c.gridx ++;
-		visPanel.add(new JLabel(LatLong.deg, JLabel.LEFT), c);
+		visPanel.add(new PamLabel(LatLong.deg, PamLabel.LEFT), c);
 		c.gridx = 0;
 		c.gridy++;
 
-		visPanel.add(new JLabel("Array Range ", JLabel.RIGHT), c);
+		visPanel.add(new PamLabel("Array Range ", PamLabel.RIGHT), c);
 		c.gridx ++;
 		visPanel.add(arrayRange, c);
 		c.gridx ++;
-		visPanel.add(new JLabel("m", JLabel.LEFT), c);
+		visPanel.add(new PamLabel("m", PamLabel.LEFT), c);
 		c.gridx = 0;
 		c.gridy++;
 		

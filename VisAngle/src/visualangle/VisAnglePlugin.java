@@ -40,7 +40,7 @@ public class VisAnglePlugin implements PamPluginInterface {
 
 	@Override
 	public String getVersion() {
-		return "1.0";
+		return "1.1";
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class VisAnglePlugin implements PamPluginInterface {
 
 	@Override
 	public String getPamVerTestedOn() {
-		return "2.02.10";
+		return "2.02.11";
 	}
 
 	@Override
